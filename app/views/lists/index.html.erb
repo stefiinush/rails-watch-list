@@ -1,0 +1,11 @@
+<%# this page will display all the lists
+then the show page will show the details of the individual lists when
+clicked %>
+
+
+<h1>Say hello to Movie World 💻 😍</h1>
+  <% @lists.each do |list| %>
+  <li><%= link_to list.name, list_path(list) %></li>
+  <%# list GET    /lists/:id(.:format) lists#show %>
+  <% end  %>
+  <%=link_to 'Add a new List 🚀', new_list_path %>
