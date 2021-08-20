@@ -1,6 +1,7 @@
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
   <%= f.button :submit %>
+  <%= f.input :photos, as: :file %>
 <% end %>
 
  <%=link_to 'Add a new List 🚀', new_list_path %>
@@ -9,12 +10,13 @@
       width: 400, height: 300, crop: :fill) %>
 
 <!-- for face detection -->
-<%= cl_image_tag("c_thumb,w_200,g_face/v1629460087/up5mdz0c4awcvb4v99po.jpg",
+<%= cl_image_tag("up5mdz0c4awcvb4v99po.jpg",
       width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
 
 <!-- app/views/articles/_form.html.erb -->
 <%= simple_form_for @list do |f| %>
   <!-- [...] -->
-  <%= f.input :photo, as: :file %>
+  <%= f.input :photos, as: :file %>
   <!-- [...] -->
 <% end %>

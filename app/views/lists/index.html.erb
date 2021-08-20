@@ -6,6 +6,9 @@ clicked %>
 <h1>Say hello to Movie World 💻 😍</h1>
   <% @lists.each do |list| %>
   <li><%= link_to list.name, list_path(list) %></li>
+  ><% list.photos.each do |photo| %>
+  <li><%= cl_image_tag photo.key, height: 200, width: 400, crop: :fill %></li>
   <%# list GET    /lists/:id(.:format) lists#show %>
   <% end  %>
+  <% end %>
   <%=link_to 'Add a new List 🚀', new_list_path %>
