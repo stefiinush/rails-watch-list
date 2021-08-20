@@ -35,5 +35,8 @@
 yarn-debug.log*
 .yarn-integrity
 .env*
+config/cloudinary.yml
 
-CLOUDINARY_URL=cloudinary://421735721467878:L8IcJ9iDEsfhzxsGPSPKR26dz6U@stefiinush
+
+
+# https://res.cloudinary.com/stefiinush/image/upload/v1629458497/test/wes_anderson_hoiepm.jpg
