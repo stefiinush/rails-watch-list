@@ -9,6 +9,13 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.find(params[:id])
   end
 
+  def create
+    @bookmark = Bookmark.new(bookmark_params)
+    @bookmark.list = @list
+    @bookmark.save
+    redirect_to list_path(@list)
+  end
+
   def destroy
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
