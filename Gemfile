@@ -55,3 +55,6 @@ gem 'rails-controller-testing', group: [ :test ]
 
 # We don’t want to share those secret keys on Github, we can use the dotenv gem for security.
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Cloudinary
+gem 'cloudinary', '~> 1.16.0'
